@@ -19,12 +19,33 @@
 	
 	<script>
 	
-		function ktora_cwiartka()
-		{
-			
-			
-		}
-
+		function ktora_cwiartka(){	
+        var w = document.getElementById("wynik");
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;            
+            
+		if(x==0 && y==0){
+          w.innerHTML="Punkt P=(0,0) jest początkiem układu współrzędnych";  
+        }else{
+            if(x==0 || y==0){
+                w.innerHTML="Punkt leży na jednej z osi układu";
+            }else{
+                if(x==15 && y==96){
+                    w.innerHTML="René Descartes, łac. Renatus Cartesius, po polsku Kartezjusz, – francuski uczony: matematyk, fizyk i filozof, jeden z najwybitniejszych intelektualistów XVII wieku, uznawany również za ojca filozofii nowożytnej. Wikipedia";
+                }else{
+                if(x>0 && y>0){
+                    w.innerHTML="wprowadzony punkt P należy do 1 ćwiartki kartezjańskiego układu współrzędnych";
+                }else if(x<0 && y>0){
+                    w.innerHTML="wprowadzony punkt P należy do 2 ćwiartki kartezjańskiego układu współrzędnych";
+                }else if(x<0 && y<0){
+                    w.innerHTML="wprowadzony punkt P należy do 3 ćwiartki kartezjańskiego układu współrzędnych";
+                }else if(x>0 && y<0){
+                    w.innerHTML="wprowadzony punkt P należy do 4 ćwiartki kartezjańskiego układu współrzędnych";
+                }
+            }
+            }
+        }
+    }
 	</script>
 
 </body>
