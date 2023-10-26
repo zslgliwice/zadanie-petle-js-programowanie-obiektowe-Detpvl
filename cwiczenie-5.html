@@ -22,7 +22,19 @@
 		function teleturniej()
 		{
 			var lucky = Math.floor(Math.random() * 3) + 1;
-			
+            var choice = document.getElementById("bramka").value;
+
+            if(choice==1 || choice==2 || choice==3 ){
+
+            if(choice==lucky){
+            document.getElementById("wynik").innerHTML="Hurra! W bramce nr "+choice+ " jest samochód!";
+            }else{
+                document.getElementById("wynik").innerHTML="Niestety! Samochód znajdował się w bramce nr "+lucky+"...";
+            }
+
+        }else{
+            document.getElementById("wynik").innerHTML="Wybierz bramke z numerem od 1 do 3!";
+        }
 		}
 
 	</script>
