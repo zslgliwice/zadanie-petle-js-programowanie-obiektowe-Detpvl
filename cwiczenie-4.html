@@ -26,7 +26,46 @@
 			var a = document.getElementById('a').value;
 			var b = document.getElementById('b').value;
 			var c = document.getElementById('c').value;
-			
+			var w = document.getElementById("wynik");
+
+			if(a%2 == 0){
+				var parzystaA = "liczba a("+a+") jest parzysta";
+			}else{
+				var parzystaA = "liczba a("+a+") nie jest parzysta";
+			}
+			if(b%2 == 0){
+				var parzystaB = "liczba b("+b+") jest parzysta";
+			}else{
+				var parzystaB = "liczba b("+b+") nie jest parzysta";
+			}
+			if(c%2 == 0){
+				var parzystaC = "liczba c("+c+") jest parzysta";
+			}else{
+				var parzystaC = "liczba c("+c+") nie jest parzysta";
+			}
+
+			if(a>=0){
+				var bezwa = a;
+			}else{
+				var bezwa = a*(-1);
+			}
+			if(b>=0){
+				var bezwb = b;
+			}else{
+				var bezwb = b*(-1);
+			}
+			if(c>=0){
+				var bezwc = c;
+			}else{
+				var bezwc = c*(-1);
+			}
+
+			w.innerHTML = `
+			<p> najmniejsza liczba z podanych to: ${Math.min(a,b,c)} </p>	
+			<p> największa liczba z podanych to: ${Math.max(a,b,c)} </p>
+			<p> liczba bezwzględna a :${bezwa}<br>liczba bezwzględna b :${bezwb}<br>liczba bezwzględna c :${bezwc} </p>	
+			<p> ${parzystaA}<br>${parzystaB}<br>${parzystaC} </p>
+			`;
 			
 		}
 
